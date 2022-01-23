@@ -12,12 +12,19 @@
             background-color:white;
         }
       
+      .colorChange:hover
+        {
+            border-color:darkblue;
+            color:darkblue;
+        }
+     
     </style>
 
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
-
+   
     <div class="bus" style="background-color:aliceblue">
+         
         <div>
         <table>
             <tr>
@@ -46,7 +53,7 @@
             </tr>
             <tr>
                 <td class="auto-style1">
-                 <asp:Label ID="Label4" runat="server" Text="  Arrival Timer"></asp:Label> 
+                 <asp:Label ID="Label4" runat="server" Text="Arrival Time"></asp:Label> 
 
                 </td>
                 <td>
@@ -55,10 +62,10 @@
             </tr>
             
         </table>
-         <asp:Button ID="btnAdd" runat="server" Text="Add" Width="68px" BackColor="#9999ff" />
-        <asp:Button ID="btnDelete" runat="server" Text="Delete" Width="64px" BackColor="#9999ff" OnClick="btnDelete_Click" />
-        <asp:Button ID="btnSave" runat="server" Text="Save" Width="70px" BackColor="#9999ff" OnClick="btnSave_Click"/>
-        <asp:Button ID="btnEdit" runat="server" Text="Edit" Width="85px" BackColor="#9999ff" OnClick="btnEdit_Click" />
+         <asp:Button class="colorChange" ID="btnAdd" runat="server" Text="Add" Width="68px" BackColor="#9999ff" />
+        <asp:Button class="colorChange" ID="btnDelete" runat="server" Text="Delete" Width="64px" BackColor="#9999ff" OnClick="btnDelete_Click" />
+        <asp:Button class="colorChange" ID="btnSave" runat="server" Text="Save" Width="70px" BackColor="#9999ff" OnClick="btnSave_Click"/>
+        <asp:Button class="colorChange" ID="btnEdit" runat="server" Text="Edit" Width="85px" BackColor="#9999ff" OnClick="btnEdit_Click" />
          </div>
       <div>
         <asp:GridView ID="gvBus" runat="server"></asp:GridView>

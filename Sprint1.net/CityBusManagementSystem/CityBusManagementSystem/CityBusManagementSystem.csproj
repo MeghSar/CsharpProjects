@@ -129,6 +129,7 @@
     <Content Include="Content\bootstrap-theme.css.map" />
     <Content Include="CityBusMaster.Master" />
     <Content Include="Home.aspx" />
+    <Content Include="jquery.js" />
     <Content Include="RouteManagement.aspx" />
     <Content Include="WebForm1.aspx" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />

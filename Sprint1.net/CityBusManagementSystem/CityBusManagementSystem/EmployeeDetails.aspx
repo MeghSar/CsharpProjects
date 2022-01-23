@@ -12,6 +12,10 @@
             
             
         }
+         .colorChange:hover{
+             border-color:midnightblue;
+             color:midnightblue;
+         }
      
         </style>
 </asp:Content>
@@ -44,10 +48,10 @@
             </tr>
              <tr>
                 <td>
-                <asp:Button ID="btnSaveEmployee" runat="server" Text="Save" BackColor="#9999ff" Width="234px" OnClick="btnSaveEmployee_Click" />
+                <asp:Button class="colorChange" ID="btnSaveEmployee" runat="server" Text="Save" BackColor="#9999ff" Width="234px" OnClick="btnSaveEmployee_Click" />
                </td>
                 <td>
-                <asp:Button ID="btnDeleteEmployee" runat="server" Text="Delete" BackColor="#9999ff" Width="234px"/>
+                <asp:Button class="colorChange" ID="btnDeleteEmployee" runat="server" Text="Delete" BackColor="#9999ff" Width="234px"/>
                  </td>
             </tr>
         </table>

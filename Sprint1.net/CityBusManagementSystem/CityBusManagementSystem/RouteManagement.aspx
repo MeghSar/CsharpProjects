@@ -7,7 +7,10 @@
             display:flex;
             background-color:white;
         }
-      
+      .colorChange:hover{
+          border-color:midnightblue;
+          color:midnightblue;
+      }
     </style>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="server">
@@ -85,17 +88,20 @@
                    </td>
                </tr>
             </table>
-            <asp:Button ID="BtnSave" runat="server" Text="Save" Width="80px" OnClick="BtnSave_Click" BackColor="#9999ff" />
-            <asp:Button ID="Btndelete" runat="server" Text="Delete" Width="86px" OnClick="Btndelete_Click" BackColor="#9999ff" />
-            <asp:Button ID="BtnEdit" runat="server" Text="Edit" Width="99px" OnClick="BtnEdit_Click" BackColor="#9999ff" />
-            <asp:Button ID="BtnExit" runat="server" Text="Exit" Width="98px" BackColor="#9999ff" />
+            <asp:Button Class="colorChange" ID="BtnSave" runat="server" Text="Save" Width="80px" OnClick="BtnSave_Click" BackColor="#9999ff" />
+            <asp:Button Class="colorChange" ID="Btndelete" runat="server" Text="Delete" Width="86px" OnClick="Btndelete_Click" BackColor="#9999ff" />
+            <asp:Button Class="colorChange" ID="BtnEdit" runat="server" Text="Edit" Width="99px" OnClick="BtnEdit_Click" BackColor="#9999ff" />
+            <asp:Button Class="colorChange" ID="BtnExit" runat="server" Text="Exit" Width="98px" BackColor="#9999ff" />
             <table>
                 <tr>
                     <td>
-                        <asp:TextBox ID="txtBusNm" placeholder="Enter Bus Name to get details" runat="server" Width="254px" ></asp:TextBox>
+                        <asp:TextBox ID="txtBusNm" placeholder="Enter Bus Name to get details" runat="server" Width="176px" ></asp:TextBox>
                     </td>
                     <td>
-                        <asp:Button ID="btnSearch" runat="server" Text="Search" Width="94px" BackColor="#9999ff" OnClick="btnSearch_Click" />
+                        <asp:Button Class="colorChange" ID="btnSearch" runat="server" Text="Search" Width="74px" BackColor="#9999ff" OnClick="btnSearch_Click" />
+                    </td>
+                    <td>
+                        <asp:Button Class="colorChange" ID="btnReload" runat="server" Text="Reload Routes" BackColor="#9999ff" OnClick="btnReload_Click" Width="108px" /> 
                     </td>
                 </tr>
             </table>
@@ -103,7 +109,9 @@
         </div>
         <div>
             <asp:Label ID="lblMsg" runat="server" Text=""></asp:Label>
+            <asp:GridView ID="gvBusDetails" runat="server"></asp:GridView>
             <asp:GridView ID="gvResult" runat="server"></asp:GridView>
+            
         </div>
       </div> 
   

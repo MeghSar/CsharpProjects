@@ -68,8 +68,23 @@ namespace CityBusManagementSystem
 
         protected void btnSearch_Click(object sender, EventArgs e)
         {
-          
+            RouteBusDBConnection routeBusDBConnectionObj = new RouteBusDBConnection();
+            DataTable dtResult1 = routeBusDBConnectionObj.SearchRouteDetailsByBusName(txtBusNm.Text);
+            DataTable dtResult2 = routeBusDBConnectionObj.SearchBusDetailsByBusName(txtBusNm.Text);
+            gvResult.DataSource = dtResult1;
+            gvResult.DataBind();
+            gvBusDetails.DataSource = dtResult2;
+            gvBusDetails.DataBind();
+        }
 
+        protected void btnReload_Click(object sender, EventArgs e)
+        {
+            RouteMgmtDBConnection routeMgmtDBConnectionObj = new RouteMgmtDBConnection();
+            DataTable dtResult = routeMgmtDBConnectionObj.SelectTutorial();
+            gvBusDetails.DataSource = null;
+
+            gvBusDetails.DataBind();
+            LoadData();
         }
     }
 }
