@@ -42,7 +42,7 @@ namespace CityBusDataLayer
         }
        
 
-        public DataTable SelectTutorial()
+        public DataTable SelectTable()
         {
             DataTable dt = new DataTable();
             SqlConnection sqlConnectionObj = new SqlConnection(sqlConnectionStr);

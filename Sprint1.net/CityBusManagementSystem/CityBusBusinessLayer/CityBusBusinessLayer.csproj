@@ -41,8 +41,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BusBussiness.cs" />
     <Compile Include="Class1.cs" />
-    <Compile Include="Connect.cs" />
+    <Compile Include="RouteBusBussiness.cs" />
+    <Compile Include="RouteBussiness.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

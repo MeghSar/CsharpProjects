@@ -12,7 +12,7 @@ namespace CityBusDataLayer.DBConnection
    public class BusDetailsDBConnection
     {
         string sqlConnectionStr = "Data Source=DESKTOP-V9IJS2G;Initial Catalog=CityBusManagementDB;Integrated Security=True";
-        public string InsertRoute(BusDetailsModel busDetailsObj)
+        public string InsertBus(BusDetailsModel busDetailsObj)
         {
             DataTable dt = new DataTable();
             SqlConnection sqlConnectionObj = new SqlConnection(sqlConnectionStr);

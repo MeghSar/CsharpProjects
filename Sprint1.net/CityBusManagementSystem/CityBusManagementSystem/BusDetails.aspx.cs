@@ -7,6 +7,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using CityBusDataLayer.DBConnection;
 using EntityLayer;
+using CityBusBusinessLayer;
 
 
 namespace CityBusManagementSystem
@@ -20,8 +21,7 @@ namespace CityBusManagementSystem
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-
-            BusDetailsDBConnection empDBConObj = new BusDetailsDBConnection();
+            BusBussiness busBussinessObj = new BusBussiness();
             BusDetailsModel busModelObj = new BusDetailsModel();
 
             busModelObj.BusName = txtBusName.Text;
@@ -29,10 +29,9 @@ namespace CityBusManagementSystem
             busModelObj.RouteNo = Convert.ToInt32(txtRouteNo.Text);
             busModelObj.DestArrivalTime = txtArrival.Text;
 
+            string msg = busBussinessObj.InsertBus(busModelObj);
+            DataTable dtUserInfo = busBussinessObj.SelectBus();
 
-
-            string msg = empDBConObj.InsertRoute(busModelObj);
-            lblBusDetails.Text = msg;
 
             LoadData();
         }
